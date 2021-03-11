@@ -2,13 +2,13 @@ package packlib.scenes;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import world.ucode.Tamagochi;
+import packlib.LibMain;
 
 public abstract class AbstractScene implements InterfaceScene {
     protected Scene scene = null;
 
     public void setScene() {
-        Stage primaryStage = Tamagochi.getPrimaryStage();
+        Stage primaryStage = LibMain.getPrimaryStage();
         primaryStage.setScene(scene);
     }
 
