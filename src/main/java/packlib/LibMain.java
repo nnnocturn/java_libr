@@ -1,25 +1,21 @@
-  package packlib;
+package packlib;
 
-import javafx.stage.Stage;
 import javafx.application.Application;
-import packlib.scenes.NewScene;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class LibMain extends Application {
-    public static Stage stage;
 
     @Override
-    public void start(Stage primaryStage) {
-        stage = primaryStage;
-        primaryStage.setTitle("Library");
-        (new NewScene("Menu.fxml")).setScene();
+    public void start(Stage primaryStage) throws Exception {
+        Parent parent = FXMLLoader.load(this.getClass().getResource("/controls/MainFormView.fxml"));
+        Scene scene = new Scene(parent);
         primaryStage.show();
-    }
-
-    public static Stage getPrimaryStage() {
-        return stage;
-    }
-    public static void main(String[] args) {
-        Database.createNewDB();
-        launch(args);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Library");
+        primaryStage.centerOnScreen();
+        primaryStage.resizableProperty();
     }
 }
