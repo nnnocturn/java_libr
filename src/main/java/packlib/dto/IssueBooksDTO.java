@@ -1,16 +1,16 @@
-package com.ijse.sys.view.util;
+package packlib.dto;
 
-public class IssueOfBookTM {
+public class IssueBooksDTO extends SuperDTO {
 
     private String book_id;
     private String member_id;
     private String issue_date;
     private String return_date;
 
-    public IssueOfBookTM() {
+    public IssueBooksDTO() {
     }
 
-    public IssueOfBookTM(String book_id, String member_id, String issue_date, String return_date) {
+    public IssueBooksDTO(String book_id, String member_id, String issue_date, String return_date) {
         this.setBook_id(book_id);
         this.setMember_id(member_id);
         this.setIssue_date(issue_date);
@@ -52,7 +52,7 @@ public class IssueOfBookTM {
 
     @Override
     public String toString() {
-        return "IssueOfBookTM{" +
+        return "IssueBooksDTO{" +
                 "book_id='" + book_id + '\'' +
                 ", member_id='" + member_id + '\'' +
                 ", issue_date='" + issue_date + '\'' +

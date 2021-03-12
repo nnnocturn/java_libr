@@ -1,14 +1,15 @@
-package com.ijse.sys.view.util;
+package packlib.dto;
 
-public class AuthorTM {
+
+public class AuthorDTO extends SuperDTO {
 
     private String author_id;
     private String author_name;
 
-    public AuthorTM() {
+    public AuthorDTO() {
     }
 
-    public AuthorTM(String author_id, String author_name) {
+    public AuthorDTO(String author_id, String author_name) {
         this.setAuthor_id(author_id);
         this.setAuthor_name(author_name);
     }
@@ -32,7 +33,7 @@ public class AuthorTM {
 
     @Override
     public String toString() {
-        return "AuthorTM{" +
+        return "AuthorDTO{" +
                 "author_id='" + author_id + '\'' +
                 ", author_name='" + author_name + '\'' +
                 '}';
